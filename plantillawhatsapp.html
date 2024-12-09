@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar Texto</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: Arial, sans-serif; background-color: #f4f4f9;">
+    <button onclick="copiarTexto()" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #007BFF; color: white; border: none; border-radius: 5px;">
+        Copiar Información
+    </button>
+
+    <script>
+        function copiarTexto() {
+            // El texto completo a copiar
+            const texto = `💼 ADMINISTRACIÓN FINANCIERA PRESENCIAL 
+
+🌟 Conviértete en un profesional integral y visionario en el mundo financiero. 🌐 Aprende a comprender el entorno empresarial, económico y social, y diseña soluciones innovadoras para organizaciones de cualquier tamaño.
+
+💡  ¿Por qué elegir IBERO?
+
+🔝 Alta empleabilidad: Competencias prácticas y estratégicas demandadas en el mercado laboral.
+
+🎖️ Acreditación en alta calidad: Estudiar en una universidad acreditada asegura que recibirás una educación de excelencia y con reconocimiento oficial, destacándote frente a otros profesionales en el mercado laboral.
+
+📈 Especialización en Alta Gerencia virtual desde 5° semestre: 🖥️
+Complementa tu carrera con conocimientos avanzados en liderazgo y gestión estratégica, ampliando tus oportunidades profesionales.
+
+ Plan de coterminales: 📚
+Avanza en tu formación cursando materias de especializaciones mientras completas tu pregrado, ahorrando tiempo y ampliando tu perfil profesional.
+
+⭐ Formación práctica y adaptable:
+Te prepara para desempeñarte en cualquier organización, sin importar su tamaño o enfoque, adaptándote a entornos cambiantes y desafiantes.
+
+💰 Valor del Semestre:
+Normal: $3.796.000
+¡Pregunta por nuestros descuentos exclusivos!
+
+🎓 Créditos Académicos: 140
+📅 Inicio del Programa: 17 de febrero de 2025 (Fecha sujeta a cambios).
+🏫 Modalidad: Presencial
+⏳ Duración: 8 semestres
+🎖️ Título: Administrador Financiero
+📊 SNIES: 108877
+
+📲 ¡No pierdas esta oportunidad de transformar tu futuro en el mundo financiero! 
+
+Inicia a estudiar con menos de $500.000 con nuestro método de financiación directo`;
+
+            // Crear un campo de texto temporal
+            const campoTemporal = document.createElement("textarea");
+            campoTemporal.value = texto;
+            document.body.appendChild(campoTemporal);
+            
+            // Seleccionar y copiar el texto
+            campoTemporal.select();
+            document.execCommand("copy");
+            
+            // Eliminar el campo de texto temporal
+            document.body.removeChild(campoTemporal);
+
+            // Notificar al usuario
+            alert("La información ha sido copiada al portapapeles.");
+        }
+    </script>
+</body>
+</html>
+
